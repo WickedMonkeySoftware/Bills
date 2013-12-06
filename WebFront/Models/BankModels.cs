@@ -83,6 +83,8 @@ namespace WebFront.Models
     public class Bank
     {
         public int BankID { get; set; }
+
+
         public string Title { get; set; }
 
         public virtual ICollection<BankAccount> BankAccounts { get; set; }
