@@ -9,6 +9,11 @@ namespace WebFront.Models
         public virtual ICollection<Service> Services { get; set; }
 
         public virtual ICollection<Bill> Bills { get; set; }
+        public virtual ICollection<Bank> Banks { get; set; }
+        public virtual ICollection<BankAccount> BankAccounts { get; set; }
+        public virtual ICollection<BankBalance> BankBallances { get; set; }
+        public virtual ICollection<SavingGoal> SavingGoals { get; set; }
+        public virtual ICollection<Income> Incomes { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

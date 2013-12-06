@@ -32,6 +32,7 @@ namespace WebFront.Models
     {
         public int BillID { get; set; }
         public int ServiceID { get; set; }
+        public string ConfirmationNumber { get; set; }
 
         public DateTime PeriodStart { get; set; }
 
