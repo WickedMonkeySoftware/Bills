@@ -14,6 +14,7 @@ namespace WebFront.Models
         public virtual ICollection<BankBalance> BankBallances { get; set; }
         public virtual ICollection<SavingGoal> SavingGoals { get; set; }
         public virtual ICollection<Income> Incomes { get; set; }
+
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
