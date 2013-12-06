@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
 using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
 
 namespace WebFront.Models
 {
@@ -14,14 +16,22 @@ namespace WebFront.Models
         public virtual ICollection<BankBalance> BankBallances { get; set; }
         public virtual ICollection<SavingGoal> SavingGoals { get; set; }
         public virtual ICollection<Income> Incomes { get; set; }
-
     }
 
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext : IdentityDbContext
     {
         public ApplicationDbContext()
             : base("DefaultConnection")
         {
         }
+
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<Bill> Bills { get; set; }
+        public DbSet<Bank> Banks { get; set; }
+        public DbSet<BankAccount> BankAccounts { get; set; }
+        public DbSet<BankBalance> BankBallances { get; set; }
+        public DbSet<SavingGoal> SavingGoals { get; set; }
+        public DbSet<Income> Incomes { get; set; }
     }
 }

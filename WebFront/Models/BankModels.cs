@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebFront.Models
 {
@@ -9,10 +11,18 @@ namespace WebFront.Models
     {
         public int IncomeID { get; set; }
 
+        [DataType(DataType.Date)]
         public DateTime Start { get; set; }
-        public TimeSpan NextEvent { get; set; }
+        
+        public DateTime NextEvent { get; set; }
 
         public int Amount { get; set; }
+
+        [ForeignKey("BankAccount")]
+        public int BankAccountID { get; set; }
+
+        [ForeignKey("ApplicationUser")]
+        public string ApplicationUserID { get; set; }
 
         public virtual ApplicationUser ApplicationUser { get; set; }
 
@@ -40,11 +50,15 @@ namespace WebFront.Models
 
     public class BankBalance
     {
+        public int BankBalanceID { get; set; }
         public DateTime EndOfDay { get; set; }
         public int Balance { get; set; }
 
         public int BillOffset { get; set; }
         public int IncomeOffset { get; set; }
+
+        [ForeignKey("BankAccount")]
+        public int BankAccountID { get; set; }
 
         public virtual BankAccount BankAccount { get; set; }
 
@@ -53,6 +67,7 @@ namespace WebFront.Models
 
     public class BankAccount
     {
+        public int BankAccountID { get; set; }
         public string Title { get; set; }
 
         public virtual Bank Bank { get; set; }
@@ -61,10 +76,13 @@ namespace WebFront.Models
         public virtual ICollection<Income> Incomes { get; set; }
 
         public virtual ApplicationUser ApplicationUser { get; set; }
+
+        public int? CreditLimit { get; set; }
     }
 
     public class Bank
     {
+        public int BankID { get; set; }
         public string Title { get; set; }
 
         public virtual ICollection<BankAccount> BankAccounts { get; set; }

@@ -211,6 +211,46 @@
     <Compile Include="Migrations\201312060047381_Basic Bank Information.Designer.cs">
       <DependentUpon>201312060047381_Basic Bank Information.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201312060134297_Adding banking information to user.cs" />
+    <Compile Include="Migrations\201312060134297_Adding banking information to user.Designer.cs">
+      <DependentUpon>201312060134297_Adding banking information to user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312060146346_Use Regular DbContext.cs" />
+    <Compile Include="Migrations\201312060146346_Use Regular DbContext.Designer.cs">
+      <DependentUpon>201312060146346_Use Regular DbContext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312060205170_Add credit accounts.cs" />
+    <Compile Include="Migrations\201312060205170_Add credit accounts.Designer.cs">
+      <DependentUpon>201312060205170_Add credit accounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312060207391_Fix credit accounts.cs" />
+    <Compile Include="Migrations\201312060207391_Fix credit accounts.Designer.cs">
+      <DependentUpon>201312060207391_Fix credit accounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312060243164_Remove credit accounts.cs" />
+    <Compile Include="Migrations\201312060243164_Remove credit accounts.Designer.cs">
+      <DependentUpon>201312060243164_Remove credit accounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312060258009_add foreign keys to income.cs" />
+    <Compile Include="Migrations\201312060258009_add foreign keys to income.Designer.cs">
+      <DependentUpon>201312060258009_add foreign keys to income.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312060300404_change data types.cs" />
+    <Compile Include="Migrations\201312060300404_change data types.Designer.cs">
+      <DependentUpon>201312060300404_change data types.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312060303406_change data types again.cs" />
+    <Compile Include="Migrations\201312060303406_change data types again.Designer.cs">
+      <DependentUpon>201312060303406_change data types again.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312060307416_change data types yet again.cs" />
+    <Compile Include="Migrations\201312060307416_change data types yet again.Designer.cs">
+      <DependentUpon>201312060307416_change data types yet again.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201312060310083_add expenses.cs" />
+    <Compile Include="Migrations\201312060310083_add expenses.Designer.cs">
+      <DependentUpon>201312060310083_add expenses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BankModels.cs" />
@@ -288,6 +328,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201312060047381_Basic Bank Information.resx">
       <DependentUpon>201312060047381_Basic Bank Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312060134297_Adding banking information to user.resx">
+      <DependentUpon>201312060134297_Adding banking information to user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312060146346_Use Regular DbContext.resx">
+      <DependentUpon>201312060146346_Use Regular DbContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312060205170_Add credit accounts.resx">
+      <DependentUpon>201312060205170_Add credit accounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312060207391_Fix credit accounts.resx">
+      <DependentUpon>201312060207391_Fix credit accounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312060243164_Remove credit accounts.resx">
+      <DependentUpon>201312060243164_Remove credit accounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312060258009_add foreign keys to income.resx">
+      <DependentUpon>201312060258009_add foreign keys to income.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312060300404_change data types.resx">
+      <DependentUpon>201312060300404_change data types.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312060303406_change data types again.resx">
+      <DependentUpon>201312060303406_change data types again.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312060307416_change data types yet again.resx">
+      <DependentUpon>201312060307416_change data types yet again.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201312060310083_add expenses.resx">
+      <DependentUpon>201312060310083_add expenses.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
