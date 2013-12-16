@@ -1,19 +1,23 @@
 ﻿@model WebFront.Models.Bank
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Rename your Bank";
+    ViewBag.Message = "";
 }
 
-<h2>Edit</h2>
-
+<div class="row">
+    <div class="col-lg-12">
+        <div class="page-header">
+            <h1>@ViewBag.Title <small>@ViewBag.Message</small></h1>
+        </div>
+    </div>
+</div>
 
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Bank</h4>
-        <hr />
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.BankID)
 

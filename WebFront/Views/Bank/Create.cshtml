@@ -2,38 +2,47 @@
 
 @{
     ViewBag.Title = "Create";
+    ViewBag.Message = "a bank";
 }
 
-<h2>Create</h2>
-
-
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>Bank</h4>
-        <hr />
-        @Html.ValidationSummary(true)
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Title, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Title)
-                @Html.ValidationMessageFor(model => model.Title)
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="page-header">
+            <h1>@ViewBag.Title <small>@ViewBag.Message</small></h1>
         </div>
     </div>
-}
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true)
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Title, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Title)
+                        @Html.ValidationMessageFor(model => model.Title)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
 </div>
 
 @section Scripts {

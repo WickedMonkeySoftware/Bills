@@ -1,39 +1,55 @@
 ﻿@model IEnumerable<WebFront.Models.Bank>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Your Bank Accounts";
+    ViewBag.Message = "Where you stand.";
 }
 
-<h2>Index</h2>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="page-header">
+            <h1>@ViewBag.Title <small>@ViewBag.Message</small></h1>
+        </div>
+    </div>
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            Total Balance
-        </th>
-        <th></th>
-    </tr>
+<div class="row">
+    <div class="col-lg-12">
+        <p>
+            @Html.ActionLink("Create New Bank", "Create")
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    Total Balance
+                </th>
+                <th></th>
+            </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @string.Format("{0:C}",ViewData[item.BankID.ToString()])
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BankID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.BankID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.BankID })
-        </td>
-    </tr>
-}
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @string.Format("{0:C}", ViewData[item.BankID.ToString()])
+                    </td>
+                    <td>
+                        @Html.ActionLink("Rename", "Edit", new { id = item.BankID }) |
+                        @Html.ActionLink("View Accounts", "Details", new { id = item.BankID }) |
+                        @Html.ActionLink("Delete Bank", "Delete", new { id = item.BankID })
+                    </td>
+                </tr>
+            }
 
-</table>
+        </table>
+    </div>
+</div>

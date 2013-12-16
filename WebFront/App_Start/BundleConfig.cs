@@ -24,7 +24,7 @@ namespace WebFront
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap-theme.css",
+                      "~/Content/bootstrap-theme.min.css",
                       "~/Content/site.css"));
         }
     }
